@@ -1,4 +1,76 @@
+"use client";
+
+import { FormEvent, useState } from "react";
+
+const serviceOptions = [
+  "Consulting",
+  "Training / Education",
+  "Mentoring",
+  "Negotiation",
+  "General enquiry",
+];
+
+type FormStatus =
+  | { type: "idle"; message: "" }
+  | { type: "success"; message: string }
+  | { type: "error"; message: string };
+
 export default function Contact() {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [status, setStatus] = useState<FormStatus>({ type: "idle", message: "" });
+
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    setIsSubmitting(true);
+    setStatus({ type: "idle", message: "" });
+
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: formData.get("name"),
+          email: formData.get("email"),
+          phone: formData.get("phone"),
+          organisation: formData.get("organisation"),
+          service: formData.get("service"),
+          message: formData.get("message"),
+          website: formData.get("website"),
+        }),
+      });
+
+      const result = (await response.json()) as {
+        success?: boolean;
+        error?: string;
+      };
+
+      if (!response.ok || !result.success) {
+        throw new Error(result.error || "Unable to send your message.");
+      }
+
+      form.reset();
+      setStatus({
+        type: "success",
+        message: "Thanks, your message has been sent. We will be in touch shortly.",
+      });
+    } catch (error) {
+      setStatus({
+        type: "error",
+        message:
+          error instanceof Error
+            ? error.message
+            : "Unable to send your message. Please try again.",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  }
+
   return (
     <section id="contact" className="bg-slate-50 px-5 py-14 sm:px-6 sm:py-20">
       <div className="mx-auto max-w-6xl">
@@ -24,29 +96,91 @@ export default function Contact() {
               Send an Enquiry
             </h3>
 
-            <form className="mt-5 grid gap-4">
+            <form className="mt-5 grid gap-4" onSubmit={handleSubmit}>
               <input
                 type="text"
+                name="website"
+                tabIndex={-1}
+                autoComplete="off"
+                className="hidden"
+                aria-hidden="true"
+              />
+
+              <input
+                type="text"
+                name="name"
                 placeholder="Your Name"
+                required
+                autoComplete="name"
                 className="rounded-xl border border-slate-200 px-4 py-3.5 text-sm outline-none transition duration-300 focus:border-green-700 focus:ring-4 focus:ring-green-100 sm:py-3"
               />
 
               <input
                 type="email"
+                name="email"
                 placeholder="Your Email"
+                required
+                autoComplete="email"
                 className="rounded-xl border border-slate-200 px-4 py-3.5 text-sm outline-none transition duration-300 focus:border-green-700 focus:ring-4 focus:ring-green-100 sm:py-3"
               />
 
+              <div className="grid gap-4 sm:grid-cols-2">
+                <input
+                  type="tel"
+                  name="phone"
+                  placeholder="Phone (optional)"
+                  autoComplete="tel"
+                  className="rounded-xl border border-slate-200 px-4 py-3.5 text-sm outline-none transition duration-300 focus:border-green-700 focus:ring-4 focus:ring-green-100 sm:py-3"
+                />
+
+                <input
+                  type="text"
+                  name="organisation"
+                  placeholder="Company / Organisation (optional)"
+                  autoComplete="organization"
+                  className="rounded-xl border border-slate-200 px-4 py-3.5 text-sm outline-none transition duration-300 focus:border-green-700 focus:ring-4 focus:ring-green-100 sm:py-3"
+                />
+              </div>
+
+              <select
+                name="service"
+                defaultValue=""
+                className="rounded-xl border border-slate-200 bg-white px-4 py-3.5 text-sm text-slate-600 outline-none transition duration-300 focus:border-green-700 focus:ring-4 focus:ring-green-100 sm:py-3"
+              >
+                <option value="">Service / Interest (optional)</option>
+                {serviceOptions.map((option) => (
+                  <option key={option} value={option}>
+                    {option}
+                  </option>
+                ))}
+              </select>
+
               <textarea
+                name="message"
                 placeholder="How can we help?"
+                required
                 className="min-h-32 rounded-xl border border-slate-200 px-4 py-3 text-sm outline-none transition duration-300 focus:border-green-700 focus:ring-4 focus:ring-green-100"
               />
 
+              {status.message && (
+                <p
+                  className={`rounded-xl border px-4 py-3 text-sm leading-6 ${
+                    status.type === "success"
+                      ? "border-green-100 bg-green-50 text-green-800"
+                      : "border-red-100 bg-red-50 text-red-700"
+                  }`}
+                  role={status.type === "error" ? "alert" : "status"}
+                >
+                  {status.message}
+                </p>
+              )}
+
               <button
                 type="submit"
-                className="w-full rounded-full bg-green-700 px-6 py-3 text-sm font-semibold text-white shadow-sm transition duration-300 hover:-translate-y-0.5 hover:bg-green-800 hover:shadow-md sm:w-fit"
+                disabled={isSubmitting}
+                className="w-full rounded-full bg-green-700 px-6 py-3 text-sm font-semibold text-white shadow-sm transition duration-300 hover:-translate-y-0.5 hover:bg-green-800 hover:shadow-md disabled:cursor-not-allowed disabled:opacity-70 disabled:hover:translate-y-0 sm:w-fit"
               >
-                Send Message
+                {isSubmitting ? "Sending..." : "Send Message"}
               </button>
             </form>
           </div>
@@ -64,10 +198,10 @@ export default function Contact() {
                   </span>
                   <br />
                   <a
-                    href="tel:+353862420345"
+                    href="tel:+353862520345"
                     className="transition duration-300 hover:text-green-700"
                   >
-                    +353 86 2420345
+                    +353 86 2520345
                   </a>
                 </p>
 
