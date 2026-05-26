@@ -1,11 +1,13 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 
 const navItems = [
-  { label: "Services", href: "#services" },
   { label: "About", href: "#about" },
-  { label: "Experience", href: "#clients" },
+  { label: "Sectors", href: "#sectors" },
+  { label: "Services", href: "#services" },
+  { label: "Experience", href: "#experience" },
   { label: "Team", href: "#team" },
 ];
 
@@ -13,22 +15,34 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="fixed left-0 top-0 z-50 w-full border-b border-slate-200/70 bg-white/90 backdrop-blur-md">
-      <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <a href="#" className="text-2xl font-bold tracking-tight text-green-800">
-          Anser
+    <header className="fixed left-0 top-0 z-50 w-full border-b border-slate-200/70 bg-white/90 shadow-[0_10px_30px_-28px_rgba(15,23,42,0.35)] backdrop-blur-md">
+      <nav className="mx-auto flex max-w-6xl items-center justify-between px-5 py-5 sm:px-6 lg:px-0">
+        <a
+          href="#"
+          className="relative block h-14 w-28 transition duration-300 hover:opacity-80 sm:h-16 sm:w-32"
+          aria-label="Atria home"
+        >
+          <Image
+            src="/images/logo.png"
+            alt="Atria"
+            fill
+            priority
+            unoptimized
+            sizes="(min-width: 640px) 128px, 112px"
+            className="object-contain object-left"
+          />
         </a>
 
         <div className="hidden items-center gap-8 text-sm font-semibold text-slate-700 md:flex">
           {navItems.map((item) => (
-            <a key={item.href} href={item.href} className="transition hover:text-green-700">
+            <a key={item.href} href={item.href} className="transition duration-300 hover:text-green-700">
               {item.label}
             </a>
           ))}
 
           <a
             href="#contact"
-            className="rounded-full bg-green-700 px-5 py-2.5 text-white transition hover:bg-green-800"
+            className="rounded-full bg-green-700 px-5 py-2.5 text-white shadow-sm transition duration-300 hover:-translate-y-0.5 hover:bg-green-800 hover:shadow-md"
           >
             Contact
           </a>
@@ -37,7 +51,7 @@ export default function Navbar() {
         <button
           type="button"
           onClick={() => setMenuOpen((open) => !open)}
-          className="flex h-11 w-11 items-center justify-center rounded-full border border-slate-300 md:hidden"
+          className="flex h-11 w-11 items-center justify-center rounded-full border border-slate-200 shadow-sm transition duration-300 hover:border-green-200 hover:bg-green-50 md:hidden"
           aria-label="Toggle navigation menu"
         >
           <div className="space-y-1.5">
@@ -49,14 +63,14 @@ export default function Navbar() {
       </nav>
 
       {menuOpen && (
-        <div className="border-t border-slate-200 bg-white px-6 py-6 md:hidden">
+        <div className="border-t border-slate-200 bg-white px-5 py-6 shadow-[0_18px_40px_-34px_rgba(15,23,42,0.45)] md:hidden">
           <div className="flex flex-col gap-5 text-sm font-semibold text-slate-700">
             {navItems.map((item) => (
               <a
                 key={item.href}
                 href={item.href}
                 onClick={() => setMenuOpen(false)}
-                className="transition hover:text-green-700"
+                className="transition duration-300 hover:text-green-700"
               >
                 {item.label}
               </a>
@@ -65,7 +79,7 @@ export default function Navbar() {
             <a
               href="#contact"
               onClick={() => setMenuOpen(false)}
-              className="mt-2 inline-flex w-fit rounded-full bg-green-700 px-5 py-2.5 text-white"
+              className="mt-2 inline-flex w-full justify-center rounded-full bg-green-700 px-5 py-2.5 text-white shadow-sm transition duration-300 hover:bg-green-800"
             >
               Contact
             </a>

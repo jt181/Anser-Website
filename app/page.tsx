@@ -2,7 +2,8 @@ import Navbar from "../sections/Navbar";
 import Hero from "../sections/Hero";
 import Services from "../sections/Services";
 import About from "../sections/About";
-import Clients from "../sections/Clients";
+import Sectors from "../sections/Sectors";
+import Experience from "../sections/Experience";
 import Team from "../sections/Team";
 import CallToAction from "../sections/CallToAction";
 import Contact from "../sections/Contact";
@@ -14,9 +15,10 @@ export default function Home() {
     <main className="min-h-screen bg-white text-slate-900">
       <Navbar />
       <Hero />
-      <Services />
       <About />
-      <Clients />
+      <Sectors />
+      <Services />
+      <Experience />
       <Team />
       <CallToAction />
       <Contact />

@@ -3,9 +3,9 @@
 :root {
   --background: #ffffff;
   --foreground: #0f172a;
-  --anser-green: #166534;
-  --anser-dark-green: #052e16;
-  --anser-soft-green: #f0fdf4;
+  --atria-green: #166534;
+  --atria-dark-green: #052e16;
+  --atria-soft-green: #f0fdf4;
 }
 
 html {

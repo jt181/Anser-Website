@@ -8,9 +8,9 @@ const plusJakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Anser | Procurement, Training & Sustainability Consultancy",
+  title: "Atria | Supply Chain Training and Consulting",
   description:
-    "Anser provides procurement, training, education and mentoring support for public and private sector organisations.",
+    "Practical consulting, mentoring and education to improve procurement, supply chain performance and sustainable operations.",
 };
 
 export default function RootLayout({
