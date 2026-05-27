@@ -7,7 +7,7 @@ const services = [
   {
     title: "Consulting",
     icon: "strategy",
-    image: "/images/consulting.png",
+    image: "/images/consulting.webp",
     imageAlt:
       "Consulting service visual for procurement and supply chain improvement.",
     preview:
@@ -26,7 +26,7 @@ const services = [
   {
     title: "Training / Education",
     icon: "presentation",
-    image: "/images/training.PNG",
+    image: "/images/training.webp",
     imageAlt:
       "Training service visual for negotiation and procurement workshops.",
     preview:
@@ -45,7 +45,7 @@ const services = [
   {
     title: "Mentoring",
     icon: "people",
-    image: "/images/mentoring.PNG",
+    image: "/images/mentoring.webp",
     imageAlt:
       "Mentoring service visual for procurement capability development.",
     preview:
@@ -63,7 +63,7 @@ const services = [
   {
     title: "Negotiation",
     icon: "book",
-    image: "/images/education.PNG",
+    image: "/images/education.webp",
     imageAlt:
       "Negotiation service visual for commercial preparation and outcomes.",
     preview:

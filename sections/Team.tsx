@@ -3,7 +3,7 @@ import Image from "next/image";
 const founders = [
   {
     name: "Declan McDonnell",
-    image: "/images/Team/declan.jpg",
+    image: "/images/Team/declan.webp",
     alt: "Declan McDonnell, Atria Supply Chain",
     bio: [
       "Declan brings over 25 years’ senior leadership experience across procurement and supply chain in both public and private sector environments.",
@@ -14,7 +14,7 @@ const founders = [
   },
   {
     name: "Sharon Byrne",
-    image: "/images/Team/sharon.jpg",
+    image: "/images/Team/sharon.webp",
     alt: "Sharon Byrne, Atria Supply Chain",
     bio: [
       "Sharon has over 20 years’ experience in procurement and supply chain across regulated and commercial environments.",

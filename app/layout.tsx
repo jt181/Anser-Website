@@ -11,6 +11,11 @@ export const metadata: Metadata = {
   title: "Atria | Supply Chain Training and Consulting",
   description:
     "Practical consulting, mentoring and education to improve procurement, supply chain performance and sustainable operations.",
+  icons: {
+    icon: [{ url: "/images/favicon.png", sizes: "512x512", type: "image/png" }],
+    shortcut: [{ url: "/images/favicon.png", sizes: "512x512", type: "image/png" }],
+    apple: [{ url: "/images/favicon.png", sizes: "512x512", type: "image/png" }],
+  },
 };
 
 export default function RootLayout({

@@ -247,7 +247,7 @@ export default function Contact() {
 
         <div className="relative mt-5 aspect-[16/8] overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition duration-300 hover:border-atria-100 hover:shadow-[0_20px_45px_-30px_rgba(15,23,42,0.4)] sm:mt-6 lg:aspect-[16/7]">
           <Image
-            src="/images/office.png"
+            src="/images/office.webp"
             alt="Atria office"
             fill
             sizes="(min-width: 1152px) 1152px, calc(100vw - 40px)"

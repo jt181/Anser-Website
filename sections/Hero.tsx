@@ -41,7 +41,7 @@ export default function Hero() {
         <div className="group relative mx-auto w-full max-w-xl pb-0 sm:pb-16 lg:max-w-none">
           <div className="relative aspect-[4/3] overflow-hidden rounded-3xl border border-white/70 bg-slate-200 shadow-[0_28px_70px_-30px_rgba(15,23,42,0.45)] ring-1 ring-slate-900/5 sm:aspect-[16/10] sm:rounded-[2rem]">
             <Image
-              src="/images/Atria-pic1.png"
+              src="/images/Atria-pic1.webp"
               alt="Atria team members collaborating"
               fill
               priority
