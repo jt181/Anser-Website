@@ -3,11 +3,11 @@ import Image from "next/image";
 export default function Hero() {
   return (
     <section className="relative overflow-hidden px-5 pb-10 pt-[6.25rem] sm:px-6 sm:pb-14 sm:pt-28 lg:pb-12 lg:pt-28">
-      <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_left,#dcfce7,transparent_35%),radial-gradient(circle_at_bottom_right,#bbf7d0,transparent_30%)]" />
+      <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_left,#e3f0e1,transparent_35%),radial-gradient(circle_at_bottom_right,#c9dfc6,transparent_30%)]" />
 
       <div className="mx-auto grid max-w-6xl items-center gap-10 sm:gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:gap-12">
         <div>
-          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-green-700 sm:text-sm sm:tracking-[0.3em]">
+          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-atria-600 sm:text-sm sm:tracking-[0.3em]">
             Procurement • Education • Sustainability
           </p>
 
@@ -23,14 +23,14 @@ export default function Hero() {
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-4">
             <a
               href="#contact"
-              className="inline-flex justify-center rounded-full bg-green-700 px-7 py-3.5 text-sm font-semibold text-white shadow-sm transition duration-300 hover:-translate-y-0.5 hover:bg-green-800 hover:shadow-md"
+              className="inline-flex justify-center rounded-full bg-atria-600 px-7 py-3.5 text-sm font-semibold text-white shadow-sm transition duration-300 hover:-translate-y-0.5 hover:bg-atria-700 hover:shadow-md"
             >
               Get in touch
             </a>
 
             <a
               href="#services"
-              className="inline-flex justify-center rounded-full border border-slate-200 bg-white px-7 py-3.5 text-sm font-semibold text-slate-700 shadow-sm transition duration-300 hover:-translate-y-0.5 hover:border-green-200 hover:text-green-700 hover:shadow-md"
+              className="inline-flex justify-center rounded-full border border-slate-200 bg-white px-7 py-3.5 text-sm font-semibold text-slate-700 shadow-sm transition duration-300 hover:-translate-y-0.5 hover:border-atria-200 hover:text-atria-600 hover:shadow-md"
             >
               Explore services
             </a>
@@ -49,17 +49,17 @@ export default function Hero() {
               className="object-cover transition duration-700 ease-out group-hover:scale-105"
             />
 
-            <div className="absolute inset-0 bg-gradient-to-tr from-green-950/20 via-black/5 to-white/10" />
+            <div className="absolute inset-0 bg-gradient-to-tr from-atria-950/20 via-black/5 to-white/10" />
             <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-slate-950/20 to-transparent" />
           </div>
 
-          <div className="mt-4 flex items-start gap-3 rounded-3xl border border-white/70 bg-white/85 p-4 shadow-[0_24px_60px_-28px_rgba(15,23,42,0.55)] ring-1 ring-green-900/5 backdrop-blur-md sm:absolute sm:bottom-0 sm:left-8 sm:right-8 sm:mt-0 sm:gap-4 sm:p-5 lg:left-10 lg:right-10">
-            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-green-50/90 text-lg font-bold text-green-700 shadow-inner ring-1 ring-green-100">
+          <div className="mt-4 flex items-start gap-3 rounded-3xl border border-white/70 bg-white/85 p-4 shadow-[0_24px_60px_-28px_rgba(15,23,42,0.55)] ring-1 ring-atria-900/5 backdrop-blur-md sm:absolute sm:bottom-0 sm:left-8 sm:right-8 sm:mt-0 sm:gap-4 sm:p-5 lg:left-10 lg:right-10">
+            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-atria-50/90 text-lg font-bold text-atria-600 shadow-inner ring-1 ring-atria-100">
               ✓
             </div>
 
             <div>
-              <p className="text-sm font-semibold text-green-700">
+              <p className="text-sm font-semibold text-atria-600">
                 Trusted Support
               </p>
 

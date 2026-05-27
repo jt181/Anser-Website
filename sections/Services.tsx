@@ -13,9 +13,9 @@ const services = [
     preview:
       "Focused procurement and supply chain advice for practical operational improvement.",
     description:
-      "Focused support to improve procurement and supply chain performance:",
+      "Focused support to improve supply chain performance:",
     details: [
-      "Procurement strategy and operating models",
+      "Sourcing strategy and operating models",
       "Spend analysis and opportunity identification",
       "Tender design and evaluation",
       "Supplier performance and development",
@@ -93,7 +93,7 @@ function ServiceIcon({ name }: { name: ServiceIconName }) {
   };
 
   return (
-    <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-green-50 text-green-700 ring-1 ring-green-100 transition duration-300 group-hover:bg-green-700 group-hover:text-white group-hover:ring-green-700">
+    <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-atria-50 text-atria-600 ring-1 ring-atria-100 transition duration-300 group-hover:bg-atria-600 group-hover:text-white group-hover:ring-atria-600">
       {name === "strategy" && (
         <svg aria-hidden="true" {...commonProps}>
           <path d="M5 19c7-1 11-5 13-13" />
@@ -164,7 +164,7 @@ export default function Services() {
       className="bg-slate-50 px-5 pb-12 pt-10 sm:px-6 sm:pb-16 sm:pt-14 lg:pt-12"
     >
       <div className="mx-auto max-w-6xl">
-        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-green-700 sm:text-sm sm:tracking-[0.25em]">
+        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-atria-600 sm:text-sm sm:tracking-[0.25em]">
           Key service areas
         </p>
 
@@ -184,7 +184,7 @@ export default function Services() {
               type="button"
               aria-label={`Learn more about ${service.title}`}
               onClick={() => setActiveService(service)}
-              className="group flex h-[23.5rem] cursor-pointer flex-col overflow-hidden rounded-2xl border border-slate-200/80 bg-white text-left shadow-sm outline-none transition duration-300 ease-out hover:-translate-y-1.5 hover:border-green-300 hover:shadow-[0_26px_55px_-30px_rgba(15,23,42,0.55)] focus-visible:ring-2 focus-visible:ring-green-700 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-50 md:h-[23.875rem]"
+              className="group flex h-[23.5rem] cursor-pointer flex-col overflow-hidden rounded-2xl border border-slate-200/80 bg-white text-left shadow-sm outline-none transition duration-300 ease-out hover:-translate-y-1.5 hover:border-atria-300 hover:shadow-[0_26px_55px_-30px_rgba(15,23,42,0.55)] focus-visible:ring-2 focus-visible:ring-atria-600 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-50 md:h-[23.875rem]"
             >
               <div className="relative h-40 overflow-hidden bg-slate-100">
                 <Image
@@ -200,7 +200,7 @@ export default function Services() {
               <div className="flex flex-1 flex-col p-5 sm:p-6">
                 <div className="flex items-center gap-3">
                   <ServiceIcon name={service.icon} />
-                  <h3 className="text-xl font-semibold text-slate-900 transition duration-300 group-hover:text-green-700">
+                  <h3 className="text-xl font-semibold text-slate-900 transition duration-300 group-hover:text-atria-600">
                     {service.title}
                   </h3>
                 </div>
@@ -209,7 +209,7 @@ export default function Services() {
                   {service.preview}
                 </p>
 
-                <span className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-green-700 transition duration-300 group-hover:gap-3 group-hover:text-green-800">
+                <span className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-atria-600 transition duration-300 group-hover:gap-3 group-hover:text-atria-700">
                   Learn more
                   <span aria-hidden="true">-&gt;</span>
                 </span>
@@ -234,7 +234,7 @@ export default function Services() {
           >
             <div className="flex items-start justify-between gap-5">
               <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.22em] text-green-700">
+                <p className="text-xs font-semibold uppercase tracking-[0.22em] text-atria-600">
                   Service
                 </p>
                 <h3
@@ -248,14 +248,14 @@ export default function Services() {
               <button
                 type="button"
                 onClick={() => setActiveService(null)}
-                className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-slate-200 bg-white text-xl leading-none text-slate-600 shadow-sm transition duration-300 hover:border-green-200 hover:bg-green-50 hover:text-green-800 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-700"
+                className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-slate-200 bg-white text-xl leading-none text-slate-600 shadow-sm transition duration-300 hover:border-atria-200 hover:bg-atria-50 hover:text-atria-700 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-atria-600"
                 aria-label="Close service details"
               >
                 x
               </button>
             </div>
 
-            <div className="mt-7 rounded-2xl border border-green-100 bg-gradient-to-br from-green-50/80 via-white to-white p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.9)] sm:p-6">
+            <div className="mt-7 rounded-2xl border border-atria-100 bg-gradient-to-br from-atria-50/80 via-white to-white p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.9)] sm:p-6">
               <p className="text-base leading-7 text-slate-700">
                 {activeService.description}
               </p>
@@ -265,10 +265,10 @@ export default function Services() {
               <p className="text-sm font-semibold uppercase tracking-[0.18em] text-slate-500">
                 Includes
               </p>
-              <ul className="mt-4 grid gap-3 text-sm leading-6 text-slate-700 sm:grid-cols-2 sm:gap-x-6">
+              <ul className="mt-4 columns-1 gap-6 text-sm leading-6 text-slate-700 sm:columns-2">
                 {activeService.details.map((detail) => (
-                  <li key={detail} className="flex gap-3">
-                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-green-700" />
+                  <li key={detail} className="mb-3 flex break-inside-avoid gap-3">
+                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-atria-600" />
                     <span>{detail}</span>
                   </li>
                 ))}

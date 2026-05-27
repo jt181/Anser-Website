@@ -13,7 +13,7 @@ const sectors = [
     ],
   },
   {
-    title: "Commercial Utilities / Semi-State",
+    title: "Commercial Utilities",
     intro:
       "Deep experience operating in complex, regulated and asset-intensive environments.",
     body: [
@@ -26,7 +26,7 @@ const sectors = [
     intro:
       "Practical support tailored to the needs of growing and resource-constrained organisations.",
     body: [
-      "Atria works with SMEs to strengthen procurement processes, reduce costs, improve supplier relationships and build internal capability.",
+      "Atria works with SMEs to strengthen supply chain processes, reduce costs, improve supplier relationships and build internal capability.",
       "We focus on simple, effective solutions that deliver immediate value while creating a platform for sustainable growth and improved operational performance.",
     ],
   },
@@ -42,7 +42,7 @@ const sectors = [
 ];
 
 export default function Sectors() {
-  const [openSector, setOpenSector] = useState<string | null>(sectors[0].title);
+  const [openSector, setOpenSector] = useState<string | null>(null);
 
   return (
     <section
@@ -52,12 +52,12 @@ export default function Sectors() {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(187,247,208,0.42),transparent_32%)]" />
 
       <div className="relative mx-auto max-w-6xl">
-        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-green-700 sm:text-sm sm:tracking-[0.25em]">
+        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-atria-600 sm:text-sm sm:tracking-[0.25em]">
           Who we support
         </p>
 
         <h2 className="mt-4 max-w-3xl text-[2rem] font-bold leading-tight tracking-tight sm:text-4xl">
-          Practical support across public, semi-state, private and education
+          Practical support across public, commercial utility, private and education
           environments.
         </h2>
 
@@ -68,7 +68,7 @@ export default function Sectors() {
             return (
               <article
                 key={sector.title}
-                className="rounded-2xl border border-slate-200 bg-white shadow-sm transition duration-300 hover:border-green-200 hover:shadow-[0_24px_55px_-34px_rgba(15,23,42,0.45)]"
+                className="rounded-2xl border border-slate-200 bg-white shadow-sm transition duration-300 hover:border-atria-200 hover:shadow-[0_24px_55px_-34px_rgba(15,23,42,0.45)]"
               >
                 <button
                   type="button"
@@ -85,7 +85,7 @@ export default function Sectors() {
                     </span>
                   </span>
 
-                  <span className="mt-1 flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-green-50 text-lg font-semibold text-green-700 ring-1 ring-green-100 transition duration-300">
+                  <span className="mt-1 flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-atria-50 text-lg font-semibold text-atria-600 ring-1 ring-atria-100 transition duration-300">
                     {isOpen ? "-" : "+"}
                   </span>
                 </button>

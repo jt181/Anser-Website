@@ -1,11 +1,25 @@
 @import "tailwindcss";
 
+@theme {
+  --color-atria-50: #f3f8f2;
+  --color-atria-100: #e3f0e1;
+  --color-atria-200: #c9dfc6;
+  --color-atria-300: #a5c9a0;
+  --color-atria-400: #7cad77;
+  --color-atria-500: #5b9b5a;
+  --color-atria-600: #4f8f4f;
+  --color-atria-700: #3f733f;
+  --color-atria-800: #345c35;
+  --color-atria-900: #2c4c2d;
+  --color-atria-950: #172918;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #0f172a;
-  --atria-green: #166534;
-  --atria-dark-green: #052e16;
-  --atria-soft-green: #f0fdf4;
+  --atria-green: #4f8f4f;
+  --atria-dark-green: #172918;
+  --atria-soft-green: #f3f8f2;
 }
 
 html {
@@ -23,6 +37,6 @@ section {
 }
 
 ::selection {
-  background: #bbf7d0;
-  color: #052e16;
+  background: #c9dfc6;
+  color: #172918;
 }

@@ -4,7 +4,7 @@ const founders = [
   {
     name: "Declan McDonnell",
     image: "/images/Team/declan.jpg",
-    alt: "Declan McDonnell, co-founder of Atria Supply Chain",
+    alt: "Declan McDonnell, Atria Supply Chain",
     bio: [
       "Declan brings over 25 years’ senior leadership experience across procurement and supply chain in both public and private sector environments.",
       "He has led large-scale procurement transformation programmes, developed high-performing teams and delivered significant value through strategic sourcing and negotiation.",
@@ -15,7 +15,7 @@ const founders = [
   {
     name: "Sharon Byrne",
     image: "/images/Team/sharon.jpg",
-    alt: "Sharon Byrne, co-founder of Atria Supply Chain",
+    alt: "Sharon Byrne, Atria Supply Chain",
     bio: [
       "Sharon has over 20 years’ experience in procurement and supply chain across regulated and commercial environments.",
       "She brings deep expertise in procurement strategy, governance, supplier management and commercial negotiation, with a strong track record of delivering cost savings and operational improvement.",
@@ -29,8 +29,8 @@ export default function Team() {
   return (
     <section id="team" className="bg-white px-5 py-14 sm:px-6 sm:py-20">
       <div className="mx-auto max-w-6xl">
-        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-green-700 sm:text-sm sm:tracking-[0.25em]">
-          Founder bios
+        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-atria-600 sm:text-sm sm:tracking-[0.25em]">
+          Bios
         </p>
 
         <h2 className="mt-4 max-w-3xl text-[2rem] font-bold leading-tight tracking-tight sm:text-4xl">
@@ -42,17 +42,17 @@ export default function Team() {
           {founders.map((founder) => (
             <article
               key={founder.name}
-              className="group flex h-full flex-col overflow-hidden rounded-2xl border border-slate-200 bg-slate-50 shadow-sm transition duration-300 ease-out hover:-translate-y-1 hover:border-green-200 hover:shadow-[0_20px_45px_-28px_rgba(15,23,42,0.45)]"
+              className="group flex h-full flex-col overflow-hidden rounded-2xl border border-slate-200 bg-slate-50 shadow-sm transition duration-300 ease-out hover:-translate-y-1 hover:border-atria-200 hover:shadow-[0_20px_45px_-28px_rgba(15,23,42,0.45)]"
             >
-              <div className="relative h-64 overflow-hidden border-b border-slate-200 bg-green-50 sm:h-80">
+              <div className="relative h-80 overflow-hidden border-b border-slate-200 bg-gradient-to-br from-atria-50 via-white to-slate-50 sm:h-[26rem] lg:h-[28rem]">
                 <Image
                   src={founder.image}
                   alt={founder.alt}
                   fill
                   sizes="(min-width: 1024px) 50vw, calc(100vw - 40px)"
-                  className="object-cover transition duration-700 ease-out group-hover:scale-105"
+                  className="object-contain object-center p-4 sm:p-6"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/25 via-transparent to-white/5" />
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-950/10 via-transparent to-white/5" />
               </div>
 
               <div className="flex flex-1 flex-col p-5 sm:p-7">

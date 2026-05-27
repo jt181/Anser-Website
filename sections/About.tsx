@@ -10,11 +10,11 @@ export default function About() {
       id="about"
       className="relative overflow-hidden bg-white px-5 py-14 sm:px-6 sm:py-20"
     >
-      <div className="absolute right-0 top-10 -z-10 h-72 w-72 rounded-full bg-green-100 blur-3xl" />
+      <div className="absolute right-0 top-10 -z-10 h-72 w-72 rounded-full bg-atria-100 blur-3xl" />
 
       <div className="mx-auto grid max-w-6xl gap-7 sm:gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
         <div className="max-w-xl">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-green-700 sm:text-sm sm:tracking-[0.25em]">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-atria-600 sm:text-sm sm:tracking-[0.25em]">
             What we do
           </p>
 

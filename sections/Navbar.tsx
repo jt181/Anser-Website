@@ -35,14 +35,14 @@ export default function Navbar() {
 
         <div className="hidden items-center gap-8 text-sm font-semibold text-slate-700 md:flex">
           {navItems.map((item) => (
-            <a key={item.href} href={item.href} className="transition duration-300 hover:text-green-700">
+            <a key={item.href} href={item.href} className="transition duration-300 hover:text-atria-600">
               {item.label}
             </a>
           ))}
 
           <a
             href="#contact"
-            className="rounded-full bg-green-700 px-5 py-2.5 text-white shadow-sm transition duration-300 hover:-translate-y-0.5 hover:bg-green-800 hover:shadow-md"
+            className="rounded-full bg-atria-600 px-5 py-2.5 text-white shadow-sm transition duration-300 hover:-translate-y-0.5 hover:bg-atria-700 hover:shadow-md"
           >
             Contact
           </a>
@@ -51,7 +51,7 @@ export default function Navbar() {
         <button
           type="button"
           onClick={() => setMenuOpen((open) => !open)}
-          className="flex h-11 w-11 items-center justify-center rounded-full border border-slate-200 shadow-sm transition duration-300 hover:border-green-200 hover:bg-green-50 md:hidden"
+          className="flex h-11 w-11 items-center justify-center rounded-full border border-slate-200 shadow-sm transition duration-300 hover:border-atria-200 hover:bg-atria-50 md:hidden"
           aria-label="Toggle navigation menu"
         >
           <div className="space-y-1.5">
@@ -70,7 +70,7 @@ export default function Navbar() {
                 key={item.href}
                 href={item.href}
                 onClick={() => setMenuOpen(false)}
-                className="transition duration-300 hover:text-green-700"
+                className="transition duration-300 hover:text-atria-600"
               >
                 {item.label}
               </a>
@@ -79,7 +79,7 @@ export default function Navbar() {
             <a
               href="#contact"
               onClick={() => setMenuOpen(false)}
-              className="mt-2 inline-flex w-full justify-center rounded-full bg-green-700 px-5 py-2.5 text-white shadow-sm transition duration-300 hover:bg-green-800"
+              className="mt-2 inline-flex w-full justify-center rounded-full bg-atria-600 px-5 py-2.5 text-white shadow-sm transition duration-300 hover:bg-atria-700"
             >
               Contact
             </a>

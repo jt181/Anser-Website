@@ -112,7 +112,7 @@ export async function POST(request: Request) {
   const html = `
     <div style="font-family: Arial, sans-serif; background: #f8fafc; padding: 24px;">
       <div style="max-width: 680px; margin: 0 auto; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 16px; overflow: hidden;">
-        <div style="background: #166534; color: #ffffff; padding: 20px 24px;">
+        <div style="background: #4f8f4f; color: #ffffff; padding: 20px 24px;">
           <h1 style="font-size: 20px; line-height: 1.3; margin: 0;">New Atria website enquiry</h1>
         </div>
         <table role="presentation" style="width: 100%; border-collapse: collapse;">
