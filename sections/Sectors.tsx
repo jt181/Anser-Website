@@ -57,7 +57,7 @@ export default function Sectors() {
         </p>
 
         <h2 className="mt-4 max-w-3xl text-[2rem] font-bold leading-tight tracking-tight sm:text-4xl">
-          Practical support across public, commercial utility, private and education
+          Professional support across public, commercial utility, private and education
           environments.
         </h2>
 
